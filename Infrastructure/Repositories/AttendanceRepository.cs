@@ -10,7 +10,7 @@ namespace Infrastructure.Repositories
         public AttendanceRepository(ApplicationDbContext context)
             : base(context) { }
 
-        public async Task<Attendance> GetTodayAttendanceAsync(int employeeId)
+        public async Task<Attendance?> GetTodayAttendanceAsync(int employeeId)
         {
             var today = DateTime.UtcNow.Date;
             return await _context
