@@ -4,24 +4,24 @@ GET {{API_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ### checkin
-POST /api/attendance/checkin
+POST {{API_HostAddress}}/api/attendance/checkin
 {
-  "employeeId": 1,
+  "employeeId":7,
   "notes": "Starting work day"
 }
 
 ### checkout
-POST /api/attendance/checkout
+POST {{API_HostAddress}}/api/attendance/checkout
 {
   "employeeId": 1,
   "notes": "Ending work day"
 }
 
 ### Get Today's Attendance:
-GET /api/attendance/today/1
+GET {{API_HostAddress}}/api/attendance/today/1
 
 ### Get Monthly Attendance:
-GET /api/attendance/monthly/1/2024/6
+GET {{API_HostAddress}}/api/attendance/monthly/1/2024/6
 
 ### Get Attendance History
-GET /api/attendance/employee/1?startDate=2024-01-01&endDate=2024-01-31
+GET {{API_HostAddress}}/api/attendance/employee/1?startDate=2024-01-01&endDate=2024-01-31
