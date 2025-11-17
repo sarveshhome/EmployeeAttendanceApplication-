@@ -19,6 +19,9 @@ namespace API.Controllers
         [HttpPost("checkin")]
         public async Task<ActionResult<AttendanceDto>> CheckIn([FromBody] CheckInRequest request)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+                
             try
             {
                 var attendance = await _attendanceService.CheckInAsync(request.EmployeeId, request.Notes);
@@ -34,6 +37,9 @@ namespace API.Controllers
         [HttpPost("checkout")]
         public async Task<ActionResult<AttendanceDto>> CheckOut([FromBody] CheckOutRequest request)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+                
             try
             {
                 var attendance = await _attendanceService.CheckOutAsync(request.EmployeeId, request.Notes);
