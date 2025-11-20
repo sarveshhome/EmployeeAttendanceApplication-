@@ -98,3 +98,14 @@ INSERT INTO Attendances (EmployeeId, CheckInTime, CheckOutTime, TotalHours, Date
 (3, '2024-01-15 08:30:00', '2024-01-15 16:30:00', '08:00:00', '2024-01-15', 'Sales calls'),
 (4, '2024-01-15 09:00:00', '2024-01-15 17:00:00', '08:00:00', '2024-01-15', 'Employee onboarding');
 ```
+
+
+-- api version
+-- ci/cd 
+-- xml and json response
+-- Rate Limit
+-- CORS
+-- Customer middleware
+-- Error Handling
+-- Unit test cases in microservice(xunit, moq)
+-- 
